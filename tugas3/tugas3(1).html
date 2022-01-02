@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <title></title>
+    <style>
+        .circle {
+            height: 100px;
+            width: 100px;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body onkeydown="getKeyAndMove(event)">
+    <input type=button onClick=move1() id="1" value='up'/>
+    <input type=button onClick=move2() id="2" value='left'/>
+    <input type=button onClick=move3() id="3" value='right'>
+    <input type=button onClick=move4() id="4" value='down'>
+    <div id="circle" class="circle"></div>
+    <script type="text/javascript">
+        var object = null;
+        function init() {
+            object = document.getElementById("circle");
+            object.style.position = "relative";
+            object.style.left = "0px";
+            object.style.top = "0px";
+        }
+        function getKeyAndMove(e) {
+            var key_code = e.which || e.keyCode;
+            switch (key_code) {
+                case 37: //left arrow key
+                    kiri();
+                    break;
+                case 38: //Up arrow key
+                    atas();
+                    break;
+                case 39: //right arrow key
+                    kanan();
+                    break;
+                case 40: //down arrow key
+                    bawah();
+                    break;
+            }
+        }
+        function move1(){
+            let id = document.getElementById("1").value;
+            buttonAndMove(id);
+        }
+        function move2(){
+            let id = document.getElementById("2").value;
+            buttonAndMove(id);
+        }
+        function move3(){
+            let id = document.getElementById("3").value;
+            buttonAndMove(id);
+        }
+        function move4(){
+            let id = document.getElementById("4").value;
+            buttonAndMove(id);
+        }
+        function buttonAndMove(id) {
+            switch (id) {
+                case "left": //left arrow key
+                    kiri();
+                    break;
+                case "up": //Up arrow key
+                    atas();
+                    break;
+                case "right": //right arrow key
+                    kanan();
+                    break;
+                case "down": //down arrow key
+                    bawah();
+                    break;
+            }
+        }
+        function kiri() {
+            object.style.left = parseInt(object.style.left) - 5 + "px";
+        }
+        function atas() {
+            object.style.top = parseInt(object.style.top) - 5 + "px";
+        }
+        function kanan() {
+            object.style.left = parseInt(object.style.left) + 5 + "px";
+        }
+        function bawah() {
+            object.style.top = parseInt(object.style.top) + 5 + "px";
+        }
+        window.onload = init;
+    </script>
+</body>
+
+</html>

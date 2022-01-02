@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <input type="file" name="" id="fileId" onchange="imageUploaded()">
+    <br><br>
+    <div class="container" style="color: aquamarine;">
+        <button onclick="displayString()">
+            Munculkan URL
+        </button>
+    </div >
+    <div id="demo"></div>
+    <div id="demo1"></div>
+    <script>
+        let base64String = "";
+
+        function imageUploaded() {
+            var file = document.querySelector(
+                'input[type=file]')['files'][0];
+
+            var reader = new FileReader();
+            console.log("next");
+
+            reader.onload = function () {
+                base64String = reader.result
+
+                imageBase64Stringsep = base64String;
+            }
+            reader.readAsDataURL(file);
+        }
+        function displayString() {
+            console.log(base64String);
+            document.getElementById("demo").innerHTML = base64String;
+            document.getElementById("demo1").innerHTML = "ATAU BISA copy url yang ada di console";
+        }
+    </script>
+</body>
+
+</html>

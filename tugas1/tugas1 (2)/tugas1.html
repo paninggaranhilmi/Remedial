@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <input id="myInput" type="text">
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+    <script>
+        function myFunction() {
+            let text = "";
+            let huruf = document.getElementById("myInput").value;
+
+            for (let i = 0; i < huruf.length; i++) {
+                var code = huruf.charAt(i).toLowerCase();
+                switch (code) {
+                    case 'a' :
+                        text += "a";
+                        break;
+                    case 'b':
+                        text += "b";
+                        break;
+                    case 'c':
+                        text += "c";
+                        break;
+                    case 'd':
+                        text += "d";
+                        break;
+                    case 'e':
+                        text += "e";
+                        break;
+                    case 'f':
+                        text += "f";
+                        break;
+                    case 'g':
+                        text += "g";
+                        break;
+                    case 'h':
+                        text += "h";
+                        break;
+                    case 'i':
+                        text += "i";
+                        break;
+                    case 'j':
+                        text += "j";
+                        break;
+                    case 'k':
+                        text += "k";
+                        break;
+                    case 'l':
+                        text += "l";
+                        break;
+                    case 'm':
+                        text += "m";
+                        break;
+                    case 'n':
+                        text += "n";
+                        break;
+                    case 'o':
+                        text += "o";
+                        break;
+                    case 'p':
+                        text += "p";
+                        break;
+                    case 'q':
+                        text += "q";
+                        break;
+                    case 'r':
+                        text += "r";
+                        break;
+                    case 's':
+                        text += "s";
+                        break;
+                    case 't':
+                        text += "t";
+                        break;
+                    case 'u':
+                        text += "u";
+                        break;
+                    case 'v':
+                        text += "v";
+                        break;
+                    case 'w':
+                        text += "w";
+                        break;
+                    case 'x':
+                        text += "x";
+                        break;
+                    case 'y':
+                        text += "y";
+                        break;
+                    case 'z':
+                        text += "z";
+                        break;
+                    default:
+                        text += pText.charAt(i);
+                        break;
+
+                }
+                document.getElementById("demo").innerHTML = text.toUpperCase();
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+
+<link rel="stylesheet" href="https://www.instagram.com/p/CYOQr2qLleb/">
+<link rel="stylesheet" href="https://madinatulquran.herokuapp.com">
